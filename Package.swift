@@ -15,6 +15,5 @@ let package = Package(
     ],
     targets: [
         .target(name: "GitInfo", dependencies: ["Parallel", "SwiftRegex"], path: "Sources/"),
-//        .testTarget(name: "ParallelTests", dependencies: ["Parallel"], path: "ParallelTests/"),
     ]
 )

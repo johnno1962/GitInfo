@@ -11,10 +11,8 @@
 //
 
 import Foundation
-#if SWIFT_PACKAGE
 import SwiftRegex
 import Parallel
-#endif
 
 public class GitInfo {
 
