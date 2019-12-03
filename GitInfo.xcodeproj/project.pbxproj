@@ -33,9 +33,24 @@
 			remoteGlobalIDString = "Parallel::Parallel";
 			remoteInfo = Parallel;
 		};
+		BB363CDB2396B14B00422D5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB363CD22396B14300422D5F;
+			remoteInfo = MakeLink;
+		};
+		BB363CDD2396B15300422D5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB363CD22396B14300422D5F;
+			remoteInfo = MakeLink;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB363CD32396B14300422D5F /* GitInfoSymlink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GitInfoSymlink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GitInfo::GitInfo::Product" /* GitInfo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GitInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_13 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/johnholdsworth/Developer/GitInfo/.build/checkouts/SwiftRegex5/Package.swift; sourceTree = "<group>"; };
 		OBJ_14 /* TupleRegex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TupleRegex.swift; sourceTree = "<group>"; };
@@ -118,6 +133,7 @@
 				"SwiftRegex::SwiftRegex::Product" /* SwiftRegex.framework */,
 				"Parallel::Parallel::Product" /* Parallel.framework */,
 				"GitInfo::GitInfo::Product" /* GitInfo.framework */,
+				BB363CD32396B14300422D5F /* GitInfoSymlink.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -145,7 +161,33 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		BB363CCE2396B14300422D5F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		BB363CD22396B14300422D5F /* GitInfoSymlink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB363CDA2396B14300422D5F /* Build configuration list for PBXNativeTarget "GitInfoSymlink" */;
+			buildPhases = (
+				BB363CCE2396B14300422D5F /* Headers */,
+				BB363CDF2396B1F800422D5F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitInfoSymlink;
+			productName = MakeLink;
+			productReference = BB363CD32396B14300422D5F /* GitInfoSymlink.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		"GitInfo::GitInfo" /* GitInfo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_24 /* Build configuration list for PBXNativeTarget "GitInfo" */;
@@ -182,13 +224,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_43 /* Build configuration list for PBXNativeTarget "Parallel" */;
 			buildPhases = (
-				BB363CB2239565D000422D5F /* ShellScript */,
 				OBJ_46 /* Sources */,
 				OBJ_48 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BB363CDE2396B15300422D5F /* PBXTargetDependency */,
 			);
 			name = Parallel;
 			productName = Parallel;
@@ -227,13 +269,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_55 /* Build configuration list for PBXNativeTarget "SwiftRegex" */;
 			buildPhases = (
-				BB363CB1239563E200422D5F /* ShellScript */,
 				OBJ_58 /* Sources */,
 				OBJ_60 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BB363CDC2396B14B00422D5F /* PBXTargetDependency */,
 			);
 			name = SwiftRegex;
 			productName = SwiftRegex;
@@ -248,6 +290,13 @@
 			attributes = {
 				LastSwiftMigration = 9999;
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					BB363CD22396B14300422D5F = {
+						CreatedOnToolsVersion = 11.2.1;
+						DevelopmentTeam = 9V5A8WE85E;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "GitInfo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -263,6 +312,7 @@
 			targets = (
 				"GitInfo::GitInfo" /* GitInfo */,
 				"GitInfo::SwiftPMPackageDescription" /* GitInfoPackageDescription */,
+				BB363CD22396B14300422D5F /* GitInfoSymlink */,
 				"Parallel::Parallel" /* Parallel */,
 				"Parallel::SwiftPMPackageDescription" /* ParallelPackageDescription */,
 				"SwiftRegex::SwiftRegex" /* SwiftRegex */,
@@ -272,25 +322,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BB363CB1239563E200422D5F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "ln -sf ../../../.build || echo \"Link not required\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BB363CB2239565D000422D5F /* ShellScript */ = {
+		BB363CDF2396B1F800422D5F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,6 +395,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BB363CDC2396B14B00422D5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB363CD22396B14300422D5F /* GitInfoSymlink */;
+			targetProxy = BB363CDB2396B14B00422D5F /* PBXContainerItemProxy */;
+		};
+		BB363CDE2396B15300422D5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB363CD22396B14300422D5F /* GitInfoSymlink */;
+			targetProxy = BB363CDD2396B15300422D5F /* PBXContainerItemProxy */;
+		};
 		OBJ_33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftRegex::SwiftRegex" /* SwiftRegex */;
@@ -376,6 +418,139 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		BB363CD82396B14300422D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnholdsworth.MakeLink;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BB363CD92396B14300422D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnholdsworth.MakeLink;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		OBJ_25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -652,6 +827,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BB363CDA2396B14300422D5F /* Build configuration list for PBXNativeTarget "GitInfoSymlink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB363CD82396B14300422D5F /* Debug */,
+				BB363CD92396B14300422D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "GitInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
