@@ -80,7 +80,11 @@ public class GitInfo {
 
     public func commitJSON() -> String? {
         let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
+        if #available(OSX 10.13, *) {
+            encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        } else {
+            encoder.outputFormatting = [.prettyPrinted]
+        }
         if let logDict = commitDictionary(),
             let logJSON = try? encoder.encode(logDict),
             let logString = String(data: logJSON, encoding: .utf8) {
