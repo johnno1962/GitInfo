@@ -33,24 +33,9 @@
 			remoteGlobalIDString = "Parallel::Parallel";
 			remoteInfo = Parallel;
 		};
-		BBDF929823A813A300325842 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BBDF929323A8139800325842;
-			remoteInfo = MakeSymlink;
-		};
-		BBDF929A23A813A800325842 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BBDF929323A8139800325842;
-			remoteInfo = MakeSymlink;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BBDF929423A8139800325842 /* libGitInfoSymlink.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libGitInfoSymlink.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GitInfo::GitInfo::Product" /* GitInfo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GitInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_13 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/johnholdsworth/Developer/GitInfo/.build/checkouts/SwiftRegex5/Package.swift; sourceTree = "<group>"; };
 		OBJ_14 /* TupleRegex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TupleRegex.swift; sourceTree = "<group>"; };
@@ -65,13 +50,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BBDF929223A8139800325842 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		OBJ_30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -140,7 +118,6 @@
 				"SwiftRegex::SwiftRegex::Product" /* SwiftRegex.framework */,
 				"Parallel::Parallel::Product" /* Parallel.framework */,
 				"GitInfo::GitInfo::Product" /* GitInfo.framework */,
-				BBDF929423A8139800325842 /* libGitInfoSymlink.dylib */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -168,35 +145,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		BBDF929023A8139800325842 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		BBDF929323A8139800325842 /* GitInfoSymlink */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BBDF929523A8139800325842 /* Build configuration list for PBXNativeTarget "GitInfoSymlink" */;
-			buildPhases = (
-				BBDF929023A8139800325842 /* Headers */,
-				BBDF929123A8139800325842 /* Sources */,
-				BBDF929223A8139800325842 /* Frameworks */,
-				BBDF929C23A8141000325842 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GitInfoSymlink;
-			productName = MakeSymlink;
-			productReference = BBDF929423A8139800325842 /* libGitInfoSymlink.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
 		"GitInfo::GitInfo" /* GitInfo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_24 /* Build configuration list for PBXNativeTarget "GitInfo" */;
@@ -239,7 +188,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				BBDF929923A813A300325842 /* PBXTargetDependency */,
 			);
 			name = Parallel;
 			productName = Parallel;
@@ -284,7 +232,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				BBDF929B23A813A800325842 /* PBXTargetDependency */,
 			);
 			name = SwiftRegex;
 			productName = SwiftRegex;
@@ -299,13 +246,6 @@
 			attributes = {
 				LastSwiftMigration = 9999;
 				LastUpgradeCheck = 9999;
-				TargetAttributes = {
-					BBDF929323A8139800325842 = {
-						CreatedOnToolsVersion = 11.3;
-						DevelopmentTeam = 9V5A8WE85E;
-						ProvisioningStyle = Automatic;
-					};
-				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "GitInfo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -321,7 +261,6 @@
 			targets = (
 				"GitInfo::GitInfo" /* GitInfo */,
 				"GitInfo::SwiftPMPackageDescription" /* GitInfoPackageDescription */,
-				BBDF929323A8139800325842 /* GitInfoSymlink */,
 				"Parallel::Parallel" /* Parallel */,
 				"Parallel::SwiftPMPackageDescription" /* ParallelPackageDescription */,
 				"SwiftRegex::SwiftRegex" /* SwiftRegex */,
@@ -330,35 +269,7 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BBDF929C23A8141000325842 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "ln -sf ../../../.build || echo \"Link not required\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		BBDF929123A8139800325842 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		OBJ_27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -411,16 +322,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BBDF929923A813A300325842 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BBDF929323A8139800325842 /* GitInfoSymlink */;
-			targetProxy = BBDF929823A813A300325842 /* PBXContainerItemProxy */;
-		};
-		BBDF929B23A813A800325842 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BBDF929323A8139800325842 /* GitInfoSymlink */;
-			targetProxy = BBDF929A23A813A800325842 /* PBXContainerItemProxy */;
-		};
 		OBJ_33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftRegex::SwiftRegex" /* SwiftRegex */;
@@ -434,120 +335,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		BBDF929623A8139800325842 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9V5A8WE85E;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		BBDF929723A8139800325842 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 9V5A8WE85E;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		OBJ_25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -824,15 +611,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BBDF929523A8139800325842 /* Build configuration list for PBXNativeTarget "GitInfoSymlink" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BBDF929623A8139800325842 /* Debug */,
-				BBDF929723A8139800325842 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		OBJ_2 /* Build configuration list for PBXProject "GitInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
