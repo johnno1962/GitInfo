@@ -60,8 +60,8 @@
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_8 /* GitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitInfo.swift; sourceTree = "<group>"; };
 		OBJ_9 /* LineGenerators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGenerators.swift; sourceTree = "<group>"; };
-		"Parallel::Parallel::Product" /* Parallel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parallel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"SwiftRegex::SwiftRegex::Product" /* SwiftRegex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftRegex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Parallel::Parallel::Product" /* Parallel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Parallel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftRegex::SwiftRegex::Product" /* SwiftRegex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftRegex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
