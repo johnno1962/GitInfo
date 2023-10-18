@@ -11,7 +11,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/johnno1962/Parallel.git", .branch("master")),
-        .package(url: "https://github.com/johnno1962/SwiftRegex5.git", .branch("master")),
+        .package(url: "https://github.com/johnno1962/SwiftRegex5.git", .branch("main")),
     ],
     targets: [
         .target(name: "GitInfo", dependencies: ["Parallel", "SwiftRegex"], path: "Sources/"),
